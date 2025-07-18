@@ -15,4 +15,4 @@ def calculate(num1, num2, operation):
                 return "Error: Division by zero"
             return num1 / num2
 
-print('Results: ', calculate(num1, num2, operation))
+print('The result is ', calculate(num1, num2, operation))
