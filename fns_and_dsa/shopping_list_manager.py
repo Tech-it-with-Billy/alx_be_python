@@ -1,21 +1,3 @@
-shopping_list = []
-
-def add_item():
-    item = input('Add  item name: ')
-    shopping_list.append(item)
-
-def remove_items():
-    item = input('Remove item: ')
-    if item in shopping_list:
-        shopping_list.remove(item)
-    else:
-        print('Item not in the list!')
-
-def display_current_list():
-    for idx, item in enumerate(shopping_list, start=1):
-        print(f"{idx}. {item}")
-        
-        
 def display_menu():
     print("Shopping List Manager")
     print("1. Add Item")
@@ -30,15 +12,15 @@ def main():
         choice = input("Enter your choice: ")
 
         if choice == '1':
-            item = input('Enter the item to add: ')
+            item = input("Enter the item to add: ")
             shopping_list.append(item)
             pass
         elif choice == '2':
-            item = input('Enter the item to remove: ')
+            item = input("Enter the item to remove: ")
             if item in shopping_list:
                 shopping_list.remove(item)
             else:
-                print('Item not in the list!')
+                print("Item not in the list!")
             pass
         elif choice == '3':
             for idx, item in enumerate(shopping_list, start=1):
