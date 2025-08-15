@@ -25,14 +25,13 @@ class Library:
     def add_book(self, book):
         if isinstance(book, Book):
             self.books.append(book)
-            print(f"Book added: {book}")
+            print(f"{book}")
         else:
-            print("Only instances of Book or its subclasses can be added.")
+            print("Only instances of Book can be added.")
 
     def list_books(self):
         if not self.books:
-            print("The library is empty.")
+            print("No books in the library.")
         else:
-            print("\nLibrary Collection:")
-            for idx, book in enumerate(self.books, start=1):
-                print(f"{idx}. {book}")
+            for book in self.books:
+                print(book)
