@@ -30,8 +30,4 @@ class Library:
             print("Only instances of Book can be added.")
 
     def list_books(self):
-        if not self.books:
-            print("No books in the library.")
-        else:
-            for book in self.books:
-                print(book)
+        return [str(book) for book in self.books]
