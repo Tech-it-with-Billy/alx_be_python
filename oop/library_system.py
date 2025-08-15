@@ -27,12 +27,8 @@ class Library:
     def add_book(self, book):
         if isinstance(book, Book):
             self.books.append(book)
-        elif isinstance(book, EBook):
-            self.books.append(book)
-        elif isinstance(book, PrintBook):
-            self.books.append(book)
         else:
-            raise TypeError("Only instances of Book or its subclasses can be added.")
+            print("Only Book instances can be added.")
     
     def list_books(self):
         return [str(book) for book in self.books]
