@@ -21,12 +21,18 @@ class PrintBook(Book):
 class Library:
     def __init__(self):
         self.books = []
-    
+
     def add_book(self, book):
         if isinstance(book, Book):
             self.books.append(book)
+            print(f"Book added: {book}")
         else:
-            print("Only Book instances can be added.")
-    
+            print("Only instances of Book or its subclasses can be added.")
+
     def list_books(self):
-        return [str(book) for book in self.books]
+        if not self.books:
+            print("The library is empty.")
+        else:
+            print("\nLibrary Collection:")
+            for idx, book in enumerate(self.books, start=1):
+                print(f"{idx}. {book}")
